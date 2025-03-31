@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenario 3: Switch Up Colors Like a Champ!</title>
+   
+</head>
+<body>
+
+    <h1>Color Switcher</h1>
+    <button id="lightBtn">Light Theme</button>
+    <button id="darkBtn">Dark Theme</button>
+
+    <script>
+       
+        const lightBtn = document.getElementById('lightBtn');
+        const darkBtn = document.getElementById('darkBtn');
+
+       
+        const body = document.body;
+
+       
+        lightBtn.addEventListener('click', () => {
+           
+            body.style.backgroundColor = 'white';
+            body.style.color = 'black';
+        });
+
+       
+        darkBtn.addEventListener('click', () => {
+           
+            body.style.backgroundColor = 'black';
+            body.style.color = 'white';
+        });
+    </script>
+
+</body>
+</html>
