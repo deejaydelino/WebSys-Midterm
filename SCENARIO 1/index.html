@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenario1: Show Off User Info with a Click! </title>
+</head>
+<body>
+    <button id="loadBtn">Load User Data</button>
+<div id="userInfo"></div>
+
+    <script>
+       
+const loadBtn = document.getElementById('loadBtn');
+
+
+const userInfoDiv = document.getElementById('userInfo');
+
+
+loadBtn.addEventListener('click', () => {
+   
+    userInfoDiv.innerHTML = 'Loading data...';
+
+  
+    setTimeout(() => {
+      
+        const nameHeading = document.createElement('h2');
+        nameHeading.textContent = 'Sung Jinwo';
+
+   
+        const bioParagraph = document.createElement('p');
+        bioParagraph.textContent = 'Arise!';
+
+       
+        userInfoDiv.innerHTML = ''; 
+        userInfoDiv.appendChild(nameHeading);
+        userInfoDiv.appendChild(bioParagraph);
+    }, 1500);
+});
+       
+    </script>
+</body>
+</html>
