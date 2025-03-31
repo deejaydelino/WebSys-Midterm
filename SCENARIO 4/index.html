@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scenario 4: Username Checker That Talks Back!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Signup Form</h1>
+  <form>
+    <label for="usernameInput">Username:</label>
+    <input type="text" id="usernameInput" placeholder="Enter your username">
+    <p id="usernameFeedback"></p>
+  </form>
+  <script>
+  
+const usernameInput = document.getElementById("usernameInput");
+
+
+const usernameFeedback = document.getElementById("usernameFeedback");
+
+
+usernameInput.addEventListener("input", () => {
+
+  const usernameLength = usernameInput.value.length;
+
+
+  if (usernameLength < 5) {
+    usernameFeedback.textContent = "Username must be at least 5 characters!";
+    usernameFeedback.style.color = "red";
+  } 
+
+  else {
+    usernameFeedback.textContent = "Username is valid!";
+    usernameFeedback.style.color = "green";
+  }
+});
+    </script>
+</body>
+</html>
